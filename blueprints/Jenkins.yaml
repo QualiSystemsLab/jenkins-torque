@@ -44,4 +44,4 @@ applications:
         - BUCKET_NAME: $BUCKET_NAME
 
 debugging:
-  availability: on
+  bastion_availability: enabled-on
