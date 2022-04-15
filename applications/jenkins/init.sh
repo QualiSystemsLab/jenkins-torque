@@ -2,7 +2,7 @@
 DOCKERFILE_REPO="https://github.com/QualiSystemsLab/torque-jenkins-dockerized.git"
 DOCKER_COMPOSE_VER="1.26.2"
 WORKDIR="/tmp/jenkins"
-COLONY_PLUGIN_URL="https://github.com/cloudshell-colony/jenkins-plugin/releases/latest/download/colony.hpi"
+TORQUE_PLUGIN_URL="https://github.com/QualiTorque/sandbox-jenkins-plugin/releases/download/torque_v1.1.0/jenkins-torque-plugin.hpi"
 
 set -o errexit
 set -o nounset
@@ -45,7 +45,7 @@ echo "==> Preparing a CasC config"
 sed -i "s|%TOKEN%|${CS_TORQUE_TOKEN}|g" ${WORKDIR}/master/jenkins.yaml
 
 echo "==> Downloading a plugin file"
-wget --no-check-certificate ${COLONY_PLUGIN_URL} -O ${WORKDIR}/master/colony.hpi
+wget --no-check-certificate ${TORQUE_PLUGIN_URL} -O ${WORKDIR}/master/torque.hpi
 
 echo "==> Starting jenkins"
 cd ${WORKDIR}
