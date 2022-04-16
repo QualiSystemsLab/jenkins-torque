@@ -2,7 +2,7 @@
 DOCKERFILE_REPO="https://github.com/QualiSystemsLab/torque-jenkins-dockerized.git"
 DOCKER_COMPOSE_VER="1.26.2"
 WORKDIR="/tmp/jenkins"
-TORQUE_PLUGIN_URL="https://github.com/QualiTorque/sandbox-jenkins-plugin/releases/download/latest/jenkins-torque-plugin.hpi"
+TORQUE_PLUGIN_URL="https://github.com/QualiTorque/sandbox-jenkins-plugin/releases/latest/download/jenkins-torque-plugin.hpi"
 
 set -o errexit
 set -o nounset
